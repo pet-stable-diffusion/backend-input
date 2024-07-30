@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>회원 가입</title>
+</head>
+<body>
+    <h1>회원 가입</h1>
+    <form action="/auth/signup/" method="post">
+        <label for="username">ID:</label>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+        <input type="submit" value="Sign Up">
+    </form>
+    <p>이미 가입된 계정이 있으신가요? <a href="/">Login</a></p>
+</body>
+</html>

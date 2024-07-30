@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <script>
+        function showError(message) {
+            alert(message);
+        }
+    </script>
+</head>
+<body>
+    <h1>Login</h1>
+    <form action="/auth/login/" method="post">
+        <label for="username">ID:</label>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+        <input type="submit" value="Login">
+    </form>
+    <p>계정이 없으십니까? <a href="/signup">Sign Up</a></p>
+    {% if error %}
+        <script>
+            showError("{{ error }}");
+        </script>
+    {% endif %}
+</body>
+</html>
